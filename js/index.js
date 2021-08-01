@@ -8,7 +8,7 @@ const languagesArray = [
     ["PHP", "Is the first backend language what I had <br> contact, is extremely simple to interact with SQL.", "40%", "php_wallpaper.jpg"],
     ["Python", "My first programming language, <br> where I learned logical thinking.", "40%", "python_wallpaper.jpg"],
     ["Java", "The language where I learned the object orientation <br> and projects patterns, very useful for biggest projects.", "50%", "java_wallpaper.png"],
-    ["SQL", "My first learned database structure. I like the way <br> what the data is padronized and stored.", "60%"]
+    ["SQL", "My first learned database structure. I like the way <br> what the data is padronized and stored.", "60%", "sql_wallpaper.jpg"]
 ];
 
 const experiencePorcentage = [
