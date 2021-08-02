@@ -8,7 +8,7 @@ const languagesArray = [
     ["PHP", "Is the first backend language what I had <br> contact, is extremely simple to interact with SQL.", "40%", "php_wallpaper.jpg"],
     ["Python", "My first programming language, <br> where I learned logical thinking.", "40%", "python_wallpaper.jpg"],
     ["Java", "The language where I learned the object orientation <br> and projects patterns, very useful for biggest projects.", "50%", "java_wallpaper.png"],
-    ["SQL", "My first learned database structure. I like the way <br> what the data is padronized and stored.", "60%", "sql_wallpaper.jpg"]
+    ["SQL", "My first learned database structure. I like the way <br> what the data is padronized and stored.", "60%", "sql_wallpaper.jpg"],
 ];
 
 const experiencePorcentage = [
@@ -24,7 +24,17 @@ const experiencePorcentage = [
     ["100%", "23rem"]
 ];
 
+const projectsData = [
+    ["CLOSE!", "public/img/projects_wallpapers/close_home_wallpaper.png", "https://github.com/LucasKleaL/close", ["html", "css", "js", "jquery", "php", "sql"], "Completly platform for clothes/accesories e-commerce, integrated with postal send calculator, payment metods like paypal, inventory management and other functionalities."],
+    ["KMFLIX", "public/img/projects_wallpapers/kmflix_home_wallpaper.png", "https://github.com/VitorCRF/KMFlix", ["html", "css", "js", "jquery", "php", "sql"], "KMFLIX is a stream platform made for academic work. Based on Netflix platform, we have implemented the principals functionalities like signup, login, series/movies dashboard, title description, filters, reproduction page and other minor functionalities."],
+    ["Sleep Sounds", "public/img/projects_wallpapers/sleepsounds_home_wallpaper.png", "https://github.com/LucasKleaL/Sleep-Sounds", ["html", "css", "js", "jquery"], "Sleep Sounds is a white noise reproduction application based on PWA (Progressive Web Application) functionality."],
+    ["MoveIt", "public/img/projects_wallpapers/moveit_home_wallpaper.png", "https://github.com/LucasKleaL/MoveIt", ["css", "js", "reactjs", "typescript"], "MoveIt is a ReactJS application made for understanding of the basic concepts on React, like components and contexts. The basic idea behind of this app is time cycles on work. When the clock achieve 0 a simple challenge appear on the screen, if the user complete this, experience is obtained and the level up."],
+    ["Word Counter", "public/img/projects_wallpapers/wordcounter_home_wallpaper.png", "https://github.com/LucasKleaL/word-counter", ["html", "css", "js", "jquery"], "This is a simple website with a word counter."]
+];
+
 $(document).ready(function() {
+
+    printProject();
 
     $(".language-icon").hover(function() {
 
@@ -57,4 +67,66 @@ $(document).ready(function() {
 
     })
 
+    function printProject() {
+
+        var content = "";
+
+        for (var i = 0; i < projectsData.length; i++) {
+            content += '<div class="div-container-project">';
+            content += '<img class="img-project" src="'+projectsData[i][1]+'">';
+            content += '<div class="div-project-attributes">';
+            content += '<h1 class="h1-project-title">'+projectsData[i][0]+'</h1>';
+            content += '<p class="p-project-desc">'+projectsData[i][4]+'</p>';
+            content += '<h2 class="h2-project-desc-title">Maded with:</h2>';
+
+            for (var y = 0; y < projectsData[i][3].length; y++) {
+
+                if (projectsData[i][3][y] === "html") {
+                    content += '<img class="language-icon-project" src="public/icons/html_icon.png">';
+                }
+                else if (projectsData[i][3][y] === "css") {
+                    content += '<img class="language-icon-project" src="public/icons/css_icon.png" style="margin-left: 1rem;">';
+                }
+                else if (projectsData[i][3][y] === "js") {
+                    content += '<img class="language-icon-project" src="public/icons/js_icon.png" style="margin-left: 1rem;">';
+                }
+                else if (projectsData[i][3][y] === "jquery") {
+                    content += '<img class="language-icon-project" src="public/icons/jquery_icon.png" style="margin-left: 1rem;">';
+                }
+                else if (projectsData[i][3][y] === "reactjs") {
+                    content += '<img class="language-icon-project" src="public/icons/react_icon.png" style="margin-left: 1rem;">';
+                }
+                else if (projectsData[i][3][y] === "typescript") {
+                    content += '<img class="language-icon-project" src="public/icons/typescript_icon.png" style="margin-left: 1rem;">';
+                }
+                else if (projectsData[i][3][y] === "php") {
+                    content += '<img class="language-icon-project" src="public/icons/php_icon.png" style="margin-left: 1rem;">';
+                }
+                else if (projectsData[i][3][y] === "python") {
+                    content += '<img class="language-icon-project" src="public/icons/python_icon.png" style="margin-left: 1rem;">';
+                }
+                else if (projectsData[i][3][y] === "java") {
+                    content += '<img class="language-icon-project" src="public/icons/java_icon.png" style="margin-left: 1rem;">';
+                }
+                else if (projectsData[i][3][y] === "sql") {
+                    content += '<img class="language-icon-project" src="public/icons/sql_icon.png" style="margin-left: 1rem;">';
+                }
+
+            }
+
+            content += '<h2 class="h2-project-desc-title">GitHub:</h2>';
+            content += '<a class="a-link-project-desc" href="'+projectsData[i][2]+'">'+projectsData[i][2]+'</a>';
+            content += '</div>';
+            content += '</div>';
+
+            $(".div-some-projects").append(content);
+
+            content = "";
+
+        }
+
+        
+
+    }
+        
 });
