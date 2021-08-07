@@ -9,12 +9,13 @@ header {
 }
 
 .div-container {
-    align-items: center;
+    align-items: center; 
+    text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    width: 100% !important; 
 }
 
 .h1-header {
@@ -26,6 +27,7 @@ header {
     padding-right: 2.5rem;
     padding-top: 2rem;
     cursor: pointer;
+    text-align: center;
 }
 
 .h1-header:hover {
@@ -55,7 +57,7 @@ header {
 }
 
 .div-tech-list {
-    width: 100%;
+    width: 100% !important;
     position: relative;
     align-items: center;
     display: flex;
@@ -75,7 +77,6 @@ header {
 .language-icon {
     height: 6.25rem;
     width: 6.25rem;
-    margin-left: 5rem;
     margin-top: 2rem;
     border-radius: 10px;
     cursor: pointer;
@@ -92,7 +93,7 @@ header {
     font-weight: 600;
     font-size: 2rem;
     padding-top: 3rem;
-    padding-left: 5rem;
+    padding-left: 2rem;
     text-align: center;
 }
 
@@ -102,7 +103,7 @@ header {
     font-weight: initial;
     font-size: 1.5rem;
     padding-top: 1rem;
-    padding-left: 5rem;
+    padding-left: 2rem;
     text-align: center;
 }
 
@@ -112,15 +113,17 @@ header {
     font-weight: 600;
     font-size: 1.5rem;
     padding-top: 1rem;
-    padding-left: 5rem;
+    padding-left: 2rem;
+    float: left;
 }
 
 .main-experience-bar {
     background-color: var(--white);
     width: 23rem;
     height: 1rem;
-    margin-top: 1rem;
-    margin-left: 5rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    position: absolute;
 }
 
 .experience-bar {
@@ -131,7 +134,7 @@ header {
 
 .div-resume {
     background-color: var(--gray-line);
-    width: 100%;
+    width: 100% !important;
 }
 
 .h1-resume {
@@ -140,7 +143,6 @@ header {
     font-weight: 650;
     font-size: 2rem;
     padding-top: 3rem;
-    padding-left: 8rem;
 }
 
 .p-resume {
@@ -149,32 +151,50 @@ header {
     font-weight: 650;
     font-size: 1.5rem;
     padding-top: 3rem;
-    padding-left: 8rem;
+    padding-left: 4rem;
+    width: 95%;
+    text-align: justify;
 }
 
 .div-some-projects {
-    width: 100%;
+    width: 100% !important;
     box-sizing: border-box;
     display: block;
 }
 
 .div-container-project {
     margin-top: 5rem;
-    margin-left: 6rem;
+    margin-left: 2rem;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 44rem);
+}
+
+.div-project-img {
     display: flex;
 }
 
 .img-project {
     float: left;
-    width: 40rem;
-    height: 22.5rem;
+    width: 31.25rem;
+    height: 17.56rem;
+    margin-top: 0.5rem;
+}
+
+.arrow-icon {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    margin-top: 7.5rem;
+    cursor: pointer;
 }
 
 .div-project-attributes {
     float: left;
-    margin-left: 3rem;
+    margin-left: 1rem;
     width: 55rem;
+    align-items: left;
+    text-align: left;
 }
 
 .h1-project-title {
@@ -190,6 +210,14 @@ header {
     font-weight: inherit;
     font-size: 1.5rem;
     padding-top: 1rem;
+    min-width: 35rem;
+    max-width: 40rem;
+}
+
+@media(max-width: 640px) {
+    .p-project-desc {
+        max-width: 35rem;
+    }
 }
 
 .h2-project-desc-title {
