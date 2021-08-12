@@ -33,9 +33,9 @@ const projectsData = [
 ];
 
 const projectsImgData = [
-    ["close_home_wallpaper.png"],
-    ["kmflix_home_wallpaper.png", "kmflix_login_wallpaper.png"],
-    ["sleepsounds_home_wallpaper.png"],
+    ["close_home_wallpaper.png", "close_product_wallpaper.png", "close_cart_wallpaper.png"],
+    ["kmflix_home_wallpaper.png", "kmflix_modal_wallpaper.png", "kmflix_login_wallpaper.png", "kmflix_account_wallpaper.png"],
+    ["sleepsounds_home_wallpaper.png", "sleepsounds_about_wallpaper.png", "sleepsounds_share_wallpaper.png"],
     ["moveit_home_wallpaper.png"],
     ["wordcounter_home_wallpaper.png"]
 ];
@@ -145,10 +145,32 @@ function nextProjectImg(id) {
 
     var getValue = document.getElementById(id).getAttribute("value");
     var getImgValue = parseInt(document.getElementById("imgProject"+getValue).getAttribute("value"));
-    var index = getImgValue + 1;
+    var index = parseInt(getImgValue);
 
-    $("#imgProject"+getValue).attr("src", "public/img/projects_wallpapers/"+projectsImgData[getValue][index]);
-    $("#imgProject"+getValue).attr("value", getImgValue+1);
+    console.log("index: "+index);
+
+    for (var i = 0; i < projectsImgData.length; i++) {
+
+        if (projectsImgData[getValue][index] === projectsImgData[i][index]) {
+
+            console.log("entrou no primeiro if");
+
+            if (projectsImgData[i].length <= index) {
+                console.log("entrou if de zerar index")
+                index = 0;
+                getImgValue = 0;
+                $("#imgProject"+getValue).attr("src", "public/img/projects_wallpapers/"+projectsImgData[getValue][index]);
+                $("#imgProject"+getValue).attr("value", 0);
+            }
+            else {
+                console.log("mudando imagem, proxima: "+parseInt(getImgValue+1))
+                $("#imgProject"+getValue).attr("src", "public/img/projects_wallpapers/"+projectsImgData[getValue][index+1]);
+                $("#imgProject"+getValue).attr("value", getImgValue+1);
+            }
+
+        }
+
+    }
 
 }
 
