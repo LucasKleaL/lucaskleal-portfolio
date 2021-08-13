@@ -1,6 +1,6 @@
 
 const languagesArray = [
-    ["HTML", "I like html for the simple way <br> to the structure the project.", "80%", "html_wallpaper.jpg"],
+    ["HTML", "I like html for the simple way <br> to structure the project.", "80%", "html_wallpaper.jpg"],
     ["CSS", "For me css is the web piece where <br> I can release my design creativity.", "70%", "css_wallpaper.jpg"],
     ["Javascript", "Javascript is my favourite language on the moment, <br> is incredible his integration and possibilities.", "70%", "js_wallpaper.jpg"],
     ["jQuery", "jQuery is the most useful and productive <br> Javascript library on my opinion.", "60%", "jquery_wallpaper.jpg"],
@@ -8,7 +8,7 @@ const languagesArray = [
     ["PHP", "Is the first backend language what I had <br> contact, is extremely simple to interact with SQL.", "40%", "php_wallpaper.jpg"],
     ["Python", "My first programming language, <br> where I learned logical thinking.", "40%", "python_wallpaper.jpg"],
     ["Java", "The language where I learned the object orientation <br> and projects patterns, very useful for biggest projects.", "50%", "java_wallpaper.png"],
-    ["SQL", "My first learned database structure. I like the way <br> what the data is padronized and stored.", "60%", "sql_wallpaper.jpg"],
+    ["SQL", "My first learned database structure. I like the way <br> what the data is padronized and stored for query's interactions.", "60%", "sql_wallpaper.jpg"],
 ];
 
 const experiencePorcentage = [
@@ -155,7 +155,7 @@ function nextProjectImg(id) {
 
             console.log("entrou no primeiro if");
 
-            if (projectsImgData[i].length <= index) {
+            if (projectsImgData[i].length - 1  <= index) {
                 console.log("entrou if de zerar index")
                 index = 0;
                 getImgValue = 0;
