@@ -1,0 +1,15 @@
+{
+  "name": "Lucas Kusman Leal - Desenvolvedor de Software",
+  "short_name": "LucasKLeal Portfolio",
+  "description": "Portfolio profissional de Lucas Kusman Leal - Desenvolvedor especializado em PHP, TypeScript, Node.js, Angular",
+  "start_url": "/",
+  "display": "standalone",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}
