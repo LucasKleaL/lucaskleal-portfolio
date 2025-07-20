@@ -2,11 +2,21 @@
     <div class="container">
         <h2 class="section-title">Meus Projetos</h2>
         <div class="row">
-            <app-project-card></app-project-card>
+            <div class="col-lg-6 mt-4" *ngFor="let project of displayedProjects">
+                <app-project-card
+                    [title]="project.title"
+                    [description]="project.description"
+                    [imageUrl]="project.imageUrl"
+                    [altDescription]="project.altDescription"
+                    [gitHubLink]="project.gitHubLink"
+                    [liveLink]="project.liveLink"
+                    [techTags]="project.techTags"
+                ></app-project-card>
+            </div>
         </div>
         <div class="text-center mt-4">
-            <app-rainbow-button variant="default" size="default" title="Mais Projetos">
-                Mais Projetos
+            <app-rainbow-button  variant="default" size="default" [title]="buttonText" (click)="toggleProjects()" (keydown.enter)="toggleProjects()">
+                {{ buttonText }}
             </app-rainbow-button>
         </div>
     </div>

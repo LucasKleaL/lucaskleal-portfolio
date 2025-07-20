@@ -6,8 +6,9 @@
                 <p class="lead mb-4">
                     Bacharel em Sistemas de Informação e Desenvolvedor de Software Fullstack com foco em aplicações web.
                 </p>
+                <p>* Site em desenvolvimento.</p>
                 <div class="d-flex gap-2 justify-content-center justify-content-md-start mb-4">
-                    <app-rainbow-button variant="default" size="default" title="Entrar em contato">
+                    <app-rainbow-button variant="default" size="default" title="Entrar em contato" (click)="copyEmailToClipboard()" (keydown.enter)="copyEmailToClipboard()">
                         <i class="bi bi-envelope"></i> Entrar em contato
                     </app-rainbow-button>
                     <app-rainbow-button variant="outline" size="default" title="Meu Currículo">
