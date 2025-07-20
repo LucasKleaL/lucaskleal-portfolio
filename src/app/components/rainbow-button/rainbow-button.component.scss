@@ -1,0 +1,172 @@
+@keyframes rainbow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-rainbow {
+  animation: rainbow 3s ease infinite;
+}
+
+.rainbow-button {
+  background: 
+    linear-gradient(#ffffff, #ffffff),
+    linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0.6) 80%, rgba(255, 255, 255, 0)),
+    linear-gradient(90deg, var(--rainbow-color-1), var(--rainbow-color-5), var(--rainbow-color-3), var(--rainbow-color-4), var(--rainbow-color-2));
+  background-size: 200%;
+  color: #111111;
+  background-clip: padding-box, border-box, border-box;
+  background-origin: border-box;
+  border: 2px solid transparent;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    z-index: -1;
+    height: 20%;
+    width: 60%;
+    transform: translateX(-50%);
+    animation: rainbow 3s ease infinite;
+    background: linear-gradient(90deg, var(--rainbow-color-1), var(--rainbow-color-5), var(--rainbow-color-3), var(--rainbow-color-4), var(--rainbow-color-2));
+    background-size: 200%;
+    filter: blur(12px);
+    border-radius: inherit;
+
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover::before {
+    filter: blur(16px) brightness(1.2);
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba(59, 130, 246, 0.5);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  & svg {
+    pointer-events: none;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+  }
+}
+
+.rainbow-button--outline {
+  background: 
+    linear-gradient(#111111, #111111),
+    linear-gradient(#111111 50%, rgba(17, 17, 17, 0.6) 80%, rgba(17, 17, 17, 0)),
+    linear-gradient(90deg, var(--rainbow-color-1), var(--rainbow-color-5), var(--rainbow-color-3), var(--rainbow-color-4), var(--rainbow-color-2));
+  color: #ffffff;
+  background-size: 200%;
+  background-clip: padding-box, border-box, border-box;
+  background-origin: border-box;
+}
+
+.rainbow-button--default-size {
+  height: 2.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.rainbow-button--sm {
+  height: 2rem;
+  border-radius: 1rem;
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+
+.rainbow-button--lg {
+  height: 2.75rem;
+  border-radius: 1rem;
+  padding: 0 2rem;
+}
+
+.rainbow-button--icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.rounded-sm {
+  border-radius: 0.4rem;
+}
+
+.outline-none {
+  outline: none;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.disabled\:pointer-events-none:disabled {
+  pointer-events: none;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
+}
