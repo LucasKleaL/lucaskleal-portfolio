@@ -1,0 +1,32 @@
+.contact-section {
+    padding: 4rem 0 8rem 0;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-label {
+    color: #c0c0c0;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #f0f0f0;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    background-color: #1a1a1a;
+    border-color: #555;
+    color: #f0f0f0;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #666;
+}
