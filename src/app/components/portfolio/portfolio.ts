@@ -19,7 +19,7 @@ export class Portfolio {
     {
       title: 'Safe Works',
       description: 'Safe Works é um sistema feito para conectar trabalhadores autônomos com clientes, oferecendo uma plataforma para gerenciar serviços, pagamentos e avaliações. Foi desenvolvido para o meu Trabalho de Conclusão de Curso (TCC), em conjunto com meus colegas de faculdade.',
-      imageUrl: 'https://raw.githubusercontent.com/Safe-Works/SafeWorks/Readme/public/demo/Desktop/SafeWorks%20Desktop%20Analytics%20Screen.png',
+      imageUrl: 'assets/img/portfolio-projects/safe-works-analytics-page.png',
       altDescription: 'Logotipo Safe Works',
       gitHubLink: 'https://github.com/Safe-Works/SafeWorks',
       liveLink: '#',
@@ -53,7 +53,7 @@ export class Portfolio {
     {
       title: 'Sollarium',
       description: 'Sollarium foi um projeto desenvolvido para a Olimpíada Brasileira de Satélites (OBSAT). Eu e minha equipe criamos um Cubesat voltado para o monitoramento de atividade solar, desenvolvendo os objetivos e documentação da missão, o sistema embarcado, além deste website para apresentar o projeto e os dados coletados.',
-      imageUrl: 'https://raw.githubusercontent.com/LucasKleaL/Sollarium/refs/heads/main/public/demo/sollarium-landing-page.png',
+      imageUrl: 'assets/img/portfolio-projects/sollarium-landing-page.png',
       gitHubLink: 'https://github.com/LucasKleaL/Sollarium',
       liveLink: 'https://sollarium.vercel.app/',
       altDescription: 'Logotipo Sollarium',
@@ -79,7 +79,7 @@ export class Portfolio {
     {
       title: 'Sollarium-Embedded',
       description: 'Sollarium-Embedded é o software embarcado no computador ESP32 do cubesat, desenvolvido em Micropython, para coletar dados dos sensores e armazená-los na memória interna do satélite no formato .CSV, além de transmitir esses dados em tempo real para uma sonda no formato JSON, conforme especificado pela OBSAT.',
-      imageUrl: 'https://raw.githubusercontent.com/LucasKleaL/Sollarium/refs/heads/main/public/demo/cubesat-sollarium.png',
+      imageUrl: 'assets/img/portfolio-projects/cubesat-sollarium.png',
       altDescription: 'Logotipo Sollarium',
       gitHubLink: 'https://github.com/LucasKleaL/Sollarium-Embedded',
       liveLink: '#',
@@ -97,7 +97,7 @@ export class Portfolio {
     {
       title: 'SetUp',
       description: 'SetUp é uma rede social gameficada e no formato de bolha. Foi desenvolvida como um trabalho acadêmico para a disciplina de Experiência Criativa.',
-      imageUrl: 'https://raw.githubusercontent.com/LucasKleaL/SetUp/refs/heads/main/public/app-demo/setup_ladingpage.jpg',
+      imageUrl: 'assets/img/portfolio-projects/setup-landing-page.png',
       altDescription: 'SetUp Landing Page Preview',
       gitHubLink: 'https://github.com/LucasKleaL/SetUp',
       liveLink: 'https://setup-lucaskleal.vercel.app/',
