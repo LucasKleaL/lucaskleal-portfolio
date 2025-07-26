@@ -15,7 +15,12 @@ export class Header {
   private readonly email = 'lucaskleal222@outlook.com';
 
   public copyEmailToClipboard() {
+    navigator.clipboard.writeText(this.email);
     this.showSuccessToast();
+  }
+
+  public openCurriculum() {
+    window.open('/cv-lucas-kusman-leal.pdf', '_blank');
   }
 
   private showSuccessToast() {

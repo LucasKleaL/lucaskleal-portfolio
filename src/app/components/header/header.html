@@ -8,11 +8,11 @@
                 </p>
                 <p>* Site em desenvolvimento.</p>
                 <div class="d-flex gap-2 justify-content-center justify-content-md-start mb-4">
-                    <app-rainbow-button variant="default" size="default" title="Entrar em contato" (click)="copyEmailToClipboard()" (keydown.enter)="copyEmailToClipboard()">
-                        <i class="bi bi-envelope"></i> Entrar em contato
-                    </app-rainbow-button>
-                    <app-rainbow-button variant="outline" size="default" title="Meu Currículo">
+                    <app-rainbow-button variant="default" size="default" title="Meu Currículo" (click)="openCurriculum()">
                         <i class="bi bi-file-earmark-text"></i> Meu Currículo
+                    </app-rainbow-button>
+                    <app-rainbow-button variant="outline" size="default" title="Entrar em contato" (click)="copyEmailToClipboard()" (keydown.enter)="copyEmailToClipboard()">
+                        <i class="bi bi-envelope"></i> Entrar em contato
                     </app-rainbow-button>
                 </div>
                 <div class="social-links d-flex align-items-center justify-content-center justify-content-md-start">
